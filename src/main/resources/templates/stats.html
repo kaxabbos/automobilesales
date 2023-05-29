@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Статистика</title>
+</head>
+<head th:insert="blocks/head :: head"></head>
+<body style="background: url(&quot;/img/bg.jpg&quot;) top / cover">
+<div th:insert="blocks/nav :: nav"></div>
+<h1 class="text-center text-white d-none d-lg-block site-heading"
+    style="position: relative;margin-top: 0px;padding-top: 80px;text-shadow: 0px 0px 20px var(--bs-black);"><span
+        class="fw-semibold site-heading-lower">Деятельность</span></h1>
+<section class="page-section clearfix" style="position: relative;">
+    <div class="container" style="background: rgba(255,255,255,0.85);padding: 15px;border-radius: 10px;">
+        <div class="row">
+            <div class="col d-xl-flex justify-content-xl-center" style="margin-bottom: 10px;">
+                <h2>Ожидание</h2>
+            </div>
+            <div class="col d-xl-flex justify-content-xl-center" style="margin-bottom: 10px;">
+                <h2>Активно</h2>
+            </div>
+            <div class="col d-xl-flex justify-content-xl-center" style="margin-bottom: 10px;">
+                <h2>Продано</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" style="margin-bottom: 10px;">
+                <p id="waiting" th:text="${waiting}" class="lead"></p>
+            </div>
+            <div class="col" style="margin-bottom: 10px;">
+                <p id="active" th:text="${active}" class="lead"></p>
+            </div>
+            <div class="col" style="margin-bottom: 10px;">
+                <p id="sold" th:text="${sold}" class="lead"></p>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+<script src="/js/current-day.js"></script>
+<script src="/js/Lightbox-Gallery.js"></script>
+</body>
+
+</html>
